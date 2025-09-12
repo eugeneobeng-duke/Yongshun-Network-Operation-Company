@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,27 +10,61 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
     }
-    header {
-      background: blue; /* Dark green */
-      color: white;
-      padding: 1rem 0;
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      background: url('win2.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      color: white;
     }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 1rem;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+
+    /* Sticky Navigation */
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       display: flex;
       justify-content: center;
       background: #ffcc00; /* Gold */
+      flex-wrap: wrap;
     }
     nav a {
       color: black;
       padding: 1rem;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
     }
     nav a:hover {
       background: #006400;
       color: white;
     }
+
     section {
       padding: 2rem;
       max-width: 900px;
@@ -46,13 +80,8 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Yongshun Network Operation Company Limited</h1>
-    <p>A Non-Profit Organization in Ghana</p>
-   
 
-  </header>
-
+  <!-- Navigation Bar -->
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -60,20 +89,14 @@
     <a href="#location">Location</a>
   </nav>
 
-  <section id="home">
-    <h2>Welcome</h2>
-    <p>
-      Nonprofit organizations play a vital role in supporting communities and improving lives. 
-      Unlike profit-driven companies, nonprofits are established to serve people, provide 
-      essential services, and create positive social impact. 
-    </p>
-      <img src="npo1.jpg" alt="GHANA"  style="max-width:100%; height:auto; display:block; margin:auto;">
-
-    <p>
-      Yongshun Network Operation Company Limited is dedicated to making a difference in Ghana 
-      through service, innovation, and community support.
-    </p>
-  </section>
+  <!-- Hero Section -->
+  <div class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Yongshun Network Operation Company Limited</h1>
+      <p>A Non-Profit Organization in Ghana dedicated to community empowerment and sustainable development.</p>
+    </div>
+  </div>
 
   <section id="about">
     <h2>About Us</h2>
@@ -82,10 +105,7 @@
       Our mission is to contribute to sustainable development, support local communities, 
       and provide resources that uplift lives. We believe in unity, service, and creating 
       opportunities for all.
- 
     </p>
-    <img src="npo4.webp" alt="GHANA"  style="max-width:100%; height:auto; display:block; margin:auto;">
-
   </section>
 
   <section id="contact">
@@ -107,17 +127,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
